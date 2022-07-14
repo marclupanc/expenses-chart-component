@@ -1,4 +1,4 @@
-# TO BE UPDATED - Frontend Mentor - Expenses chart component solution
+# Frontend Mentor - Expenses chart component solution
 
 This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -16,12 +16,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+![](./Result-hover.png)
+![](./Result-mobile.png)
 
 ## My process
 
@@ -29,31 +25,30 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Learned about React Charts and how to implement it to the project. Have been struggling with makeing it work, the problem was in importing { Chart as ChartJs } from "chart.js/auto";
 
-To see how you can add code snippets, see below:
+Used mapping to enter data from the data file that was provided. Wll be possible to change this to API.
+Used Reduce to check for the maximum number from the chart and dynamically making it different color.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Proud of this function:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+function getBgColors() {
+  const maxSum = chartData.reduce(
+    (acc, shot) => (acc = acc > shot.amount ? acc : shot.amount),
+    0
+  );
+  const color = chartData.map((num) =>
+    num.amount === maxSum ? "hsl(186, 34%, 60%)" : "hsl(10, 79%, 65%)"
+  );
+  return color;
+}
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -64,17 +59,11 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Chart JS](https://www.chartjs.org/docs/latest/) - This helped me with setting up Chart JS
+- [Grid Examples](https://gridbyexample.com/examples/) - This helped me with understanding better grid system in css
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- LinkedIn - [Marc](https://www.linkedin.com/in/marc-lupanciuc-7424b5113/)
+- Frontend Mentor - [@marclupanc](https://www.frontendmentor.io/profile/marclupanc)
+- Facebook - [@marclupanc](https://www.facebook.com/mlupanciuc/)

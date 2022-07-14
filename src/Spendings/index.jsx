@@ -27,17 +27,6 @@ function Spendings() {
     ],
     options: {
       responsive: true,
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              callback: function (value, index, values) {
-                return "$" + value;
-              },
-            },
-          },
-        ],
-      },
     },
   });
 
