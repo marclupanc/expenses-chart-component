@@ -1,0 +1,12 @@
+* {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  font-size: 18px;
+}

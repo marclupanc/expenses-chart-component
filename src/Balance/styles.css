@@ -1,0 +1,36 @@
+.container {
+  margin-top: 20vh;
+  width: 498px;
+  height: auto;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 15px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 166px 166px 166px;
+}
+
+p {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  padding: 20px 0 0 30px;
+}
+
+.sum {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  grid-row: 2;
+  margin: 0;
+  padding: 10px 0 10px 30px;
+}
+
+.logo {
+  grid-column: 3;
+  grid-row: 1/3;
+  align-self: center;
+}
