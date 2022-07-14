@@ -9,6 +9,7 @@
 .content {
   display: grid;
   grid-template-columns: 166px 166px 166px;
+  height: 115px;
 }
 
 p {
@@ -22,11 +23,11 @@ p {
 
 .sum {
   color: white;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   grid-row: 2;
   margin: 0;
-  padding: 10px 0 10px 30px;
+  padding: 0 0 10px 30px;
 }
 
 .logo {

@@ -1,13 +1,13 @@
 import "./App.css";
-import Balance from "./Balance/Balance";
+import Balance from "./Balance";
+import Spendings from "./Spendings";
 
 function App() {
   return (
     <div className="App">
       <body>
         <Balance />
-        Spending - Last 7 days mon tue wed thu fri sat sun Total this month
-        $478.33 +2.4% from last month
+        <Spendings />
       </body>
     </div>
   );
